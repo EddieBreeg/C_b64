@@ -1,10 +1,14 @@
 #include "b64.h"
 
+// isolates the nth block of 6 bits in x, starting from the right
+#define NTH_BLOCK(x,n) (x >> (6*n)) & 0x3f
+
 // the conversion table for base46 encoding/decoding
 const char* b64Table = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
 // encodes a block 3 (or less) bytes from src, and writes
-// the base64 encoded data in dst
+// the base64 encoded data in dst. If length > 3, the function
+// will only encode 3 bytes of data
 void encode(const char* src, char* dst, unsigned int length)
 {
     if(length>=3)

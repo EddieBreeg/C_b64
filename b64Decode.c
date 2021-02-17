@@ -1,6 +1,8 @@
 #include "src/b64.h"
 #include <stdio.h>
 
+// converts any base64 string (either passed as an argument or contained in a file) to its original binary data
+
 int main(int argc, char const *argv[])
 {
     FILE* f = fopen(argv[1], "r");

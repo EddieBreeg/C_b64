@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "src/b64.h"
 
+// encodes the content of any string or file in base64
+
 int main(int argc, char const *argv[])
 {
     FILE* f = fopen(argv[1], "rb");
