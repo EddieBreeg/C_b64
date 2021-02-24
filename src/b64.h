@@ -4,7 +4,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-void encode(const char *src, char* dst, unsigned int length);
-void decode(const char *src, char* dst);
+typedef unsigned char byte;
+
+
+void encode(const byte *src, byte* dst, unsigned int length);
+// void decode(const byte *src, byte* dst);
 
 #endif
