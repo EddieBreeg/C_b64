@@ -6,8 +6,7 @@
 
 typedef unsigned char byte;
 
-
 void encode(const byte *src, byte* dst, unsigned int length);
-// void decode(const byte *src, byte* dst);
+int decode(const byte *src, byte* dst);
 
 #endif
